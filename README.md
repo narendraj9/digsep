@@ -7,9 +7,9 @@
     Using the scripts requires `tweepy` and `numpy`. Please use the
     `requirements.txt`:
     
-    ```shell
+```shell
         pip install -r requirements.txt 
-    ```
+```
     
     A few things that aren't right about the script:
     1. Exceptions are caught away from where they occur.
@@ -31,7 +31,8 @@
     him/her as the followers. So, for a user we have outbound friend
     edges and inbound follower edges in the twitter social graph.
     
-    *Note*: The problem statement says that we must find the degree of
+
+ **Note**: The problem statement says that we must find the degree of
         separation between two users. There have been similar
         experiments done in the past where degrees of separation were
         calculated for large graphs like Facebook[1]. But it is to be
@@ -70,7 +71,7 @@
         
         Here is a session:
 
-        ```shell
+```shell
         --> Opening in your browser: https://api.twitter.com/oauth/authorize?oauth_token=pPukIAAAAAAAvUfKAAABVOkLqrk
         --> Please copy the PIN here after you authorize.
 
@@ -83,9 +84,9 @@
         ................Found!
         Paul Graham --> Jennifer 8. Lee --> Erlich Bachman --> Siddha Ganju --> Narendra Joshi
 
-    ```
+```
     
-    *Addendum* : I hadn't thought about it before but we can implement
+**Addendum** : I hadn't thought about it before but we can implement
     a distributed crawler[4] for twitter and build the social
     graph. Once we have the social graph, the same algorithms can be
     applied to it and then we won't incur the cost of networking. So,
