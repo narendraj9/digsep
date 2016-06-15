@@ -11,12 +11,14 @@ Using the scripts requires `tweepy` and `numpy`. Please use the
 ```
     
 A few things that aren't right about the script:
+
 1. Exceptions are caught away from where they occur.
 2. Because of the way twitter returns users, we now care only
    about the 5000 followers/friends returned in one request. This is
    good sometimes because some users have millions of followers fetching
    all of which would exhaust our API limit because we can only fetch 5k
    at a time.
+
 3. It is like a hacked up thing. 
        
     
