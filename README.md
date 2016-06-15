@@ -1,7 +1,7 @@
 # Degree of Separation on Twitter
     
     I did this as part of the hiring challenge for a company. I think
-    it's cool and people can build it better. Pull requests are
+    it's cool and people can make it better. Pull requests are
     welcome. :)
 
     Using the scripts requires `tweepy` and `numpy`. Please use the
