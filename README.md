@@ -11,13 +11,13 @@ Using the scripts requires `tweepy` and `numpy`. Please use the
 ```
     
 A few things that aren't right about the script:
-    1. Exceptions are caught away from where they occur.
-    2. Because of the way twitter returns users, we now care only
-       about the 5000 followers/friends returned in one request. This is
-       good sometimes because some users have millions of followers fetching
-       all of which would exhaust our API limit because we can only fetch 5k
-       at a time.
-    3. It is like a hacked up thing. 
+1. Exceptions are caught away from where they occur.
+2. Because of the way twitter returns users, we now care only
+   about the 5000 followers/friends returned in one request. This is
+   good sometimes because some users have millions of followers fetching
+   all of which would exhaust our API limit because we can only fetch 5k
+   at a time.
+3. It is like a hacked up thing. 
        
     
 ## Problem 
@@ -95,15 +95,15 @@ Here is a session:
 We need to take into consideration the following facts:
 
 1. Making an API call is many orders of magnitude more expensive
-compared to a CPU cycle. So, it is very important that we try
-keep the number of API calls to a minimum.
+   compared to a CPU cycle. So, it is very important that we try
+   keep the number of API calls to a minimum.
 
-Moreover, Twitter rate-limits requests to about 15 per
-rate-limit window.  The rate limit window is 15 minutes.
+    Moreover, Twitter rate-limits requests to about 15 per
+    rate-limit window.  The rate limit window is 15 minutes.
 
 2. The branching factor for the twitter social graph is huge. So,
-we should try to reduce the depth of a *single* traversal into
-the graph. This justifies going for a bi-directional search.
+   we should try to reduce the depth of a *single* traversal into
+   the graph. This justifies going for a bi-directional search.
 
 For example, if the twitter social graph is just a binary tree
 then for a degree of separation of 6, the bi-directional search 
